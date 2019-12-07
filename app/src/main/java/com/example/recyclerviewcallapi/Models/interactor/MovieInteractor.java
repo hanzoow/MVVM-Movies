@@ -31,7 +31,6 @@ public class MovieInteractor {
                         movie.setId(JO.getString("id"));
                         movie.setImgTitle(JO.getString("image_title"));
                         movie.setImgUrl(JO.getString("img_url"));
-
                         movies.add(movie);
                     }
 

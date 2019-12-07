@@ -12,6 +12,7 @@ class BaseRequest {
     public String request(String link) throws IOException {
         StringBuffer result = new StringBuffer();
 
+
         URL url = new URL(link);
         HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url.openConnection();
         InputStream inputStream = httpsURLConnection.getInputStream();
@@ -23,7 +24,7 @@ class BaseRequest {
             result.append(line);
         } while (line != null);
 
-//        return result.toString();
-        throw new IOException("ERROR");
+        return result.toString();
+      //  throw new IOException("ERROR");
     }
 }

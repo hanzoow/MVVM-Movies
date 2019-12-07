@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerviewcallapi.Models.Movies;
 import com.example.recyclerviewcallapi.R;
+import com.example.recyclerviewcallapi.views.Adapter.ViewHolder.TestViewHolder;
 
 import java.util.List;
 
@@ -19,17 +20,16 @@ public class TestAdapter extends RecyclerView.Adapter<TestViewHolder> {
     private Context context;
     private List<Movies> movies;
 
-    public TestAdapter(String img,Context context){
-        this.context = context;
-        this.img_url = img;
+    public TestAdapter(List<Movies> movies){
+     //   this.context = context;
+        this.movies = movies;
     }
 
     @NonNull
     @Override
     public TestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.test,parent,false);
-        TestViewHolder vh = new TestViewHolder(v);
-        return vh;
+        return new TestViewHolder(v);
     }
 
     @Override

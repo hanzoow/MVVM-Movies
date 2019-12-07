@@ -26,6 +26,7 @@ public class MovieVM {
 
             @Override
             public void onGetMovieFail(Exception e) {
+
                 errorObserver.postData(e);
             }
         });
